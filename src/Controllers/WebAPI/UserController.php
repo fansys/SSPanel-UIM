@@ -124,6 +124,7 @@ final class UserController extends BaseController
             }
 
             $user_raw->alive_ip = 0;
+            $user_raw->flow = "xtls-rprx-vision";
             $users[] = $user_raw;
         }
 

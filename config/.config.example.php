@@ -159,3 +159,9 @@ $_ENV['dns_server_443'] = 'dns.google';     //The address of the DNS server. Def
 $_ENV['dns_server_port_443'] = 443;         //The port of the DNS server. Default 443
 $_ENV['dns_path_443'] = '/dns-query';       //The path of the DNS server. Default /dns-query
 $_ENV['dns_type_443'] = 'https';            //The type of the DNS server. Default https, h3
+
+# Support Cloudflare proxy
+if ( isset($_SERVER['HTTP_X_FORWARDED_FOR']) ) {
+    $list = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+    $_SERVER['REMOTE_ADDR'] = $list[0];
+}
