@@ -189,6 +189,7 @@ final class NodeController extends BaseController
     {
         $node = (new Node())->find($args['id']);
 
+        $node->id = $request->getParam('custom_id');
         $node->name = $request->getParam('name');
         $node->node_group = $request->getParam('node_group') ?? 0;
         $node->server = trim($request->getParam('server'));

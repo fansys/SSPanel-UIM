@@ -42,6 +42,12 @@
                                 </div>
                             </div>
                             <div class="form-group mb-3 row">
+                                <label class="form-label col-3 col-form-label">节点ID</label>
+                                <div class="col">
+                                    <input id="custom_id" type="text" class="form-control" value="{$node->id}">
+                                </div>
+                            </div>
+                            <div class="form-group mb-3 row">
                                 <label class="form-label col-3 col-form-label">连接地址</label>
                                 <div class="col">
                                     <input id="server" type="text" class="form-control" value="{$node->server}">
